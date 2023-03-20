@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -34,8 +35,8 @@ class SubjectTest {
 
         theSubject.addSpectateur(Spec);
 
-        theSubject.notifySpectateur(AslaN);
+        theSubject.notifySpectateur();
 
-        Mockito.verify(Spec).update(AslaN);
+        Mockito.verify(Spec).update();
     }
 }
