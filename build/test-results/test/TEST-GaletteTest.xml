@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="GaletteTest" tests="4" skipped="0" failures="3" errors="0" timestamp="2023-03-20T17:37:13" hostname="ASLAN" time="0.025">
+<testsuite name="GaletteTest" tests="4" skipped="0" failures="3" errors="0" timestamp="2023-03-20T17:54:26" hostname="ASLAN" time="0.023">
   <properties/>
-  <testcase name="testGetPoidsPart()" classname="GaletteTest" time="0.021">
+  <testcase name="testGetPoidsPart()" classname="GaletteTest" time="0.019">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;312.5&gt; but was: &lt;0.0&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;312.5&gt; but was: &lt;0.0&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
