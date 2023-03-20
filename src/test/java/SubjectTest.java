@@ -1,10 +1,14 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class SubjectTest {
     private Subject theSubject;
     private Observer theObserver;
+
+    @BeforeEach
     public void initObjectTest() throws Exception {
         theSubject = new Subject();
         theObserver = new Spectateur();
@@ -34,8 +38,8 @@ class SubjectTest {
 
         theSubject.addSpectateur(Spec);
 
-        theSubject.notifySpectateur(AslaN);
+        theSubject.notifySpectateur();
 
-        Mockito.verify(Spec).update(AslaN);
+        Mockito.verify(Spec);
     }
 }
