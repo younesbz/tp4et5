@@ -10,7 +10,6 @@ public abstract class Decorateur extends Galette {
     public abstract String getIngredient();
 
 
-
 }
 
 

@@ -10,6 +10,7 @@ public class Galette implements Comparable<Galette> {
     private String ingredients = "";
 
     public void partistionGalette(double poids,int nbPart)  {
+        this.poids = poids ;
         poid_de_Part = poids /nbPart;
         ListePartDeGalette = new ArrayList<>();
 
@@ -19,14 +20,11 @@ public class Galette implements Comparable<Galette> {
             ListePartDeGalette.add(pGalellte);
         }
     }
-
-
-
     public Galette()  {
-
+        poid_de_Part =0;
         ListePartDeGalette = new ArrayList<>();
-
     }
+
     public ArrayList<PartDeGalette> getListePartDeGalette() {
         return ListePartDeGalette ;
     }

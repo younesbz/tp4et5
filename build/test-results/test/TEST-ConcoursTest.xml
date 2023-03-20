@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ConcoursTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-03-20T18:14:51" hostname="LAPTOP-J9BN5RTL" time="0.015">
+<testsuite name="ConcoursTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-20T18:44:38" hostname="LAPTOP-J9BN5RTL" time="0.012">
   <properties/>
-  <testcase name="testConcourirPasDeGagnant()" classname="ConcoursTest" time="0.011"/>
-  <testcase name="testConcourir()" classname="ConcoursTest" time="0.002"/>
-  <testcase name="testNettoyerTable()" classname="ConcoursTest" time="0.0"/>
-  <testcase name="testAjouterGalette()" classname="ConcoursTest" time="0.0"/>
-  <testcase name="testEnleverLesPerdants()" classname="ConcoursTest" time="0.001"/>
-  <testcase name="testAjouterMangeur()" classname="ConcoursTest" time="0.0"/>
+  <testcase name="testNettoyerTable()" classname="ConcoursTest" time="0.012"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

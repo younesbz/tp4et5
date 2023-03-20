@@ -51,7 +51,7 @@ public class ConcoursTest {
         mangeur.mangerPart(mangeur.rechercherPart(galettes));
 
         concours.nettoyerTable();
-
+        assertEquals(2500.0, gPis.getPoids());
         assertEquals(0, concours.getLes_mangeurs_de_galettes().size());
     }
 

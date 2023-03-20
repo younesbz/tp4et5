@@ -35,14 +35,14 @@ class GaletteTest {
 
     @Test
     public void testGetPoids() throws Exception {
-        assertEquals("2500", galette.getPoids());
-        assertEquals("500", galette2.getPoids());
+        assertEquals(2500, galette.getPoids());
+        assertEquals(500, galette2.getPoids());
     }
 
     @Test
     public void testGetPoidsPart() throws Exception {
-        assertEquals("312.5", galette.getPoid_de_Part());
-        assertEquals("62.5", galette2.getPoid_de_Part());
+        assertEquals(312.5, galette.getPoid_de_Part());
+        assertEquals(62.5, galette2.getPoid_de_Part());
 
     }
 
