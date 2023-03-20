@@ -28,14 +28,13 @@ public class StrategieTest {
         Listgalettes.add(galette2);
         Listgalettes.add(galette3);
         Listgalettes.add(galette4);
-
-        Strategie s = new StrategieGourmand();
+        s = new StrategieGourmand();
         MangeurDeGalettes YounesG = new MangeurDeGalettes(s);
 
-        Strategie s2 = new StrategieGourmand();
+        s2 = new StrategieGourmand();
         MangeurDeGalettes AslanGu = new MangeurDeGalettes(s2);
 
-        Strategie s3 = new StrategieVege();
+        s3 = new StrategieVege();
     }
 
     @Test
