@@ -16,9 +16,10 @@ public class ConcoursTest {
 
     @BeforeEach
     public void setUp() {
-        concours = new Concours();
+
         galettes = new ArrayList<>();
         mangeurs = new ArrayList<>();
+        concours = new Concours(mangeurs, galettes);
         strat = new StrategieGourmand();
     }
 
@@ -62,25 +63,25 @@ public class ConcoursTest {
         galettes.add(gPis);
         galettes.add(gPis);
 
-        MangeurDeGalettes mangeur = new MangeurDeGalettes(1000.50,strat);
+        MangeurDeGalettes mangeur = new MangeurDeGalettes(strat);
         mangeur.mangerPart(mangeur.rechercherPart(galettes));
 
         concours.ajouterGalette(gPis);
         concours.nettoyerTable();
         concours.enleverLesPerdants();
 
-        assertEquals(0, concours.getMangeurs().size());
+        assertEquals(0, concours.getLes_mangeurs_de_galettes().size());
     }
 
 
     @Test
     public void testConcourir() throws Exception {
-        Galette galette1 = new Galette(1000.50,1);
+        Galette galette1 = new Galette();
         GalettePistache gPis = new GalettePistache(galette1);
         assertEquals(0, galettes.size());
 
 
-        MangeurDeGalettes mangeur = new MangeurDeGalettes(1000.50,strat);
+        MangeurDeGalettes mangeur = new MangeurDeGalettes(strat);
 
         concours.ajouterGalette(gPis);
         concours.ajouterMangeur(mangeur);
@@ -92,11 +93,11 @@ public class ConcoursTest {
 
     @Test
     public void testConcourirPasDeGagnant() throws Exception {
-        Galette galette1 = new Galette(1000.50,4);
+        Galette galette1 = new Galette();
         GalettePistache gPis = new GalettePistache(galette1);
         assertEquals(0, galettes.size());
 
-        MangeurDeGalettes mangeur = new MangeurDeGalettes(100.50,strat);
+        MangeurDeGalettes mangeur = new MangeurDeGalettes(strat);
 
         concours.ajouterGalette(gPis);
         concours.ajouterMangeur(mangeur);
@@ -108,12 +109,12 @@ public class ConcoursTest {
 
     @Test
     public void testConcourirException() throws Exception {
-        Galette galette1 = new Galette(1000.50,1);
+        Galette galette1 = new Galette();
         GalettePistache gPis = new GalettePistache(galette1);
         assertEquals(0, galettes.size());
 
 
-        MangeurDeGalettes mangeur = new MangeurDeGalettes(1000.50,strat);
+        MangeurDeGalettes mangeur = new MangeurDeGalettes(strat);
 
         //On a ajoute le mangeur au concours mais pas la galette
         concours.ajouterMangeur(mangeur);
