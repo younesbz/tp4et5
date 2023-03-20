@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
 
-public class Concours {
+public class Concours extends Subject {
     private ArrayList<MangeurDeGalettes> les_mangeurs_de_galettes;
     private ArrayList<Galette> les_galettes;
 
@@ -25,6 +25,7 @@ public class Concours {
             boolean test_if_they_can_eat_any_galettes = les_mangeurs_de_galettes.get(i).rechercherPart(this.les_galettes)==null;
             if ( test_if_they_can_eat_any_galettes ) {
                 les_mangeurs_de_galettes.remove(i);
+                notifySpectateur();
             }
         }
     }
