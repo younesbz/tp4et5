@@ -6,19 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StrategieTest {
-    private Strategie strategieGo,strategieV,strategieGu;
     private List<Galette> Listgalettes;
     private MangeurDeGalettes Younes;
 
-    private Strategie s;
+    private Strategie s,s2,s3;
     private Galette galette1,galette2,galette3,galette4;
 
     @BeforeEach
     void setUp() throws Exception {
-        strategieGo = new StrategieGourmand();
-        strategieGu = new StrategieGourmet();
-        strategieV = new StrategieVege();
-
         Listgalettes = new ArrayList<>();
         galette1 = new Galette();
         galette2 = new Galette();
@@ -35,8 +30,12 @@ public class StrategieTest {
         Listgalettes.add(galette4);
 
         Strategie s = new StrategieGourmand();
-        MangeurDeGalettes Younes = new MangeurDeGalettes(s);
+        MangeurDeGalettes YounesG = new MangeurDeGalettes(s);
 
+        Strategie s2 = new StrategieGourmand();
+        MangeurDeGalettes AslanGu = new MangeurDeGalettes(s2);
+
+        Strategie s3 = new StrategieVege();
     }
 
     @Test
@@ -50,7 +49,15 @@ public class StrategieTest {
         assertEquals("GalettePistache", Listgalettes.getClass().getName());
         }
 
-
-
+    @Test
+    void testChoisirPartGalettesFrangipane() throws Exception {
+        PartDeGalette part = s2.rechercherPart(Listgalettes,0);
+        assertEquals("GaletteFrangipane", Listgalettes.getClass().getName());
+    }
+    @Test
+    void testChoisirPartGalettesVege() throws Exception {
+        PartDeGalette part = s3.rechercherPart(Listgalettes,0);
+        assertEquals("GaletteVege", Listgalettes.getClass().getName());
+    }
     }
 
