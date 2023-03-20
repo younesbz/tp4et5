@@ -30,7 +30,7 @@ public class Concours {
     }
 
     public MangeurDeGalettes concourir() {
-//manire de creatoin dun galette
+    //manire de creatoin dun galette
         GaletteFactory galetteFactory = new FrangipaneGaletteFactory();
         Galette galette = galetteFactory.createGalette();
 
@@ -44,6 +44,7 @@ public class Concours {
         while (!les_galettes.isEmpty() || !les_mangeurs_de_galettes.isEmpty()) {
             for (MangeurDeGalettes mangeur : les_mangeurs_de_galettes) {
                 PartDeGalette part = mangeur.rechercherPart(les_galettes);
+
                 mangeur.mangerPart(part);
                 if (mangeur.isAvoir_la_feve())
                 {

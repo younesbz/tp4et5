@@ -17,7 +17,7 @@ public class Galette implements Comparable<Galette> {
 
         for (int i=0;i<nbPart;i++)
         {
-            PartDeGalette pGalellte = new PartDeGalette(poid_de_Part);
+            PartDeGalette pGalellte = new PartDeGalette(poid_de_Part,this);
             ListePartDeGalette.add(pGalellte);
         }
     }
@@ -32,5 +32,9 @@ public class Galette implements Comparable<Galette> {
     @Override
     public int compareTo(Galette o) {
         return (int) (o.getPoid_de_Part() - this.poid_de_Part);
+    }
+
+    public void remove(PartDeGalette part) {
+        this.ListePartDeGalette.remove(part);
     }
 }
