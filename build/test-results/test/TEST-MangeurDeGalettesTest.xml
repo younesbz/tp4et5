@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MangeurDeGalettesTest" tests="2" skipped="0" failures="2" errors="0" timestamp="2023-03-20T20:47:26" hostname="ASLAN" time="0.005">
+<testsuite name="MangeurDeGalettesTest" tests="2" skipped="0" failures="2" errors="0" timestamp="2023-03-20T20:50:04" hostname="ASLAN" time="0.017">
   <properties/>
-  <testcase name="testRechercherPart()" classname="MangeurDeGalettesTest" time="0.002">
+  <testcase name="testRechercherPart()" classname="MangeurDeGalettesTest" time="0.016">
     <failure message="java.lang.NullPointerException: Cannot invoke &quot;Galette.partistionGalette(double, int)&quot; because &quot;this.galette&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;Galette.partistionGalette(double, int)&quot; because &quot;this.galette&quot; is null
 	at GaletteFrangipane.&lt;init&gt;(GaletteFrangipane.java:7)
 	at MangeurDeGalettesTest.setUp(MangeurDeGalettesTest.java:23)
