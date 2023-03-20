@@ -6,9 +6,6 @@ public class Concours extends Subject {
 
 
     private ArrayList<MangeurDeGalettes> les_mangeurs_de_galettes;
-
-
-
     private ArrayList<Galette> les_galettes;
 
     public Concours(ArrayList<MangeurDeGalettes> les_mangeurs_de_galettes, ArrayList<Galette> les_galettes) {
