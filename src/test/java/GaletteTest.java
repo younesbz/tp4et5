@@ -50,7 +50,6 @@ class GaletteTest {
     public void testGetListePartDeGalette() throws Exception {
         List<PartDeGalette> liste = galette.getListePartDeGalette();
         assertEquals(8, liste.size());
-
     }
 
 }
