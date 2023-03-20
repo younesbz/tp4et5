@@ -1,9 +1,14 @@
+
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Random;
 
 public class Concours extends Subject {
+
+
     private ArrayList<MangeurDeGalettes> les_mangeurs_de_galettes;
+
+
+
     private ArrayList<Galette> les_galettes;
 
     public Concours(ArrayList<MangeurDeGalettes> les_mangeurs_de_galettes, ArrayList<Galette> les_galettes) {
@@ -31,9 +36,7 @@ public class Concours extends Subject {
     }
 
     public MangeurDeGalettes concourir() {
-    //manire de creatoin dun galette
-        GaletteFactory galetteFactory = new FrangipaneGaletteFactory();
-        Galette galette = galetteFactory.createGalette();
+
 
         Random random = new Random();
         int index_Aleatoire_de_galette = random.nextInt(les_galettes.size());
@@ -59,5 +62,18 @@ public class Concours extends Subject {
         return null;
     }
 
+    public void ajouterMangeur(MangeurDeGalettes mangeur) {
+        les_mangeurs_de_galettes.add(mangeur);
+    }
 
+    public ArrayList<MangeurDeGalettes> getLes_mangeurs_de_galettes() {
+        return les_mangeurs_de_galettes;
+    }
+    public ArrayList<Galette> getLes_galettes() {
+        return les_galettes;
+    }
+
+    public void ajouterGalette(Galette galette) {
+        les_galettes.add(galette);
+    }
 }

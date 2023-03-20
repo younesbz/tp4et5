@@ -1,6 +1,5 @@
+
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 
 public class Galette implements Comparable<Galette> {
 
@@ -8,10 +7,9 @@ public class Galette implements Comparable<Galette> {
     private  ArrayList<PartDeGalette> ListePartDeGalette;
     private  double poid_de_Part;
     private  double poids;
+    private String ingredients = "";
 
-
-    public Galette(double poids,int nbPart)  {
-
+    public void partistionGalette(double poids,int nbPart)  {
         poid_de_Part = poids /nbPart;
         ListePartDeGalette = new ArrayList<>();
 
@@ -20,6 +18,14 @@ public class Galette implements Comparable<Galette> {
             PartDeGalette pGalellte = new PartDeGalette(poid_de_Part,this);
             ListePartDeGalette.add(pGalellte);
         }
+    }
+
+
+
+    public Galette()  {
+
+        ListePartDeGalette = new ArrayList<>();
+
     }
     public ArrayList<PartDeGalette> getListePartDeGalette() {
         return ListePartDeGalette ;
@@ -34,7 +40,15 @@ public class Galette implements Comparable<Galette> {
         return (int) (o.getPoid_de_Part() - this.poid_de_Part);
     }
 
+    public double getPoids() {
+        return poids;
+    }
+
     public void remove(PartDeGalette part) {
         this.ListePartDeGalette.remove(part);
+    }
+
+    protected String getIngredient() {
+        return this.ingredients;
     }
 }

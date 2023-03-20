@@ -1,4 +1,4 @@
-import java.util.Comparator;
+
 import java.util.List;
 
 public class MangeurDeGalettes {
@@ -15,6 +15,7 @@ public class MangeurDeGalettes {
     }
 
     public void mangerPart(PartDeGalette part) {
+
         part.getMyGalette().remove(part);
         poids_Mange += part.getPoids();
         avoir_la_feve = part.contientFeve();

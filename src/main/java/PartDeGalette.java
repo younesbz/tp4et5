@@ -1,3 +1,4 @@
+
 public class PartDeGalette {
     private boolean feve;
     private double poids;
