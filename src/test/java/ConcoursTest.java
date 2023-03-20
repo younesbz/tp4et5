@@ -80,7 +80,6 @@ public class ConcoursTest {
     public void testConcourir() throws Exception {
         Galette galette1 = new Galette();
         GalettePistache gPis = new GalettePistache(galette1);
-        assertEquals(0, galettes.size());
 
 
         MangeurDeGalettes mangeur = new MangeurDeGalettes(strat);

@@ -17,11 +17,11 @@ public class PartDeGalette {
         this.myGalette = galette;
     }
     public double getPoids() {
-        return 0;
+        return this.poids;
     }
 
     public boolean contientFeve() {
-        return false ;
+        return this.feve ;
     }
 
     public void setPossedefeve(boolean b) {

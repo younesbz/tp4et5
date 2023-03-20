@@ -11,6 +11,7 @@ public class GaletteFrangipane extends Decorateur {
     public String getIngredient() {
         return galette.getIngredient() + "Frangipane";
     }
+
     public ArrayList<PartDeGalette> getListePartDeGalette() {
         return this.galette.getListePartDeGalette() ;
     }

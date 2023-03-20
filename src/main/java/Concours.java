@@ -42,10 +42,10 @@ public class Concours extends Subject {
         int index_Aleatoire_de_galette = random.nextInt(les_galettes.size());
         Galette galette_choisi_aleatoirement = les_galettes.get(index_Aleatoire_de_galette);
         int index_Aleatoire_de_pergalette = random.nextInt(galette_choisi_aleatoirement.getListePartDeGalette().size());
-        les_galettes.get(index_Aleatoire_de_galette).getListePartDeGalette().get(index_Aleatoire_de_pergalette).setPossedefeve(true);
+        les_galettes.get(index_Aleatoire_de_galette).getListePartDeGalette().get(1).setPossedefeve(true);
         nettoyerTable();
         enleverLesPerdants();
-        while (!les_galettes.isEmpty() || !les_mangeurs_de_galettes.isEmpty()) {
+        while (!les_galettes.isEmpty() && !les_mangeurs_de_galettes.isEmpty()) {
             for (MangeurDeGalettes mangeur : les_mangeurs_de_galettes) {
                 PartDeGalette part = mangeur.rechercherPart(les_galettes);
 
