@@ -6,19 +6,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StrategieTest {
-    private List<Galette> Listgalettes;
-    private MangeurDeGalettes Younes;
+    private ArrayList<Galette> Listgalettes;
+    private MangeurDeGalettes Younes,Aslan;
 
     private Strategie s,s2,s3;
     private Galette galette1,galette2,galette3,galette4;
 
     @BeforeEach
     void setUp() throws Exception {
-        Listgalettes = new ArrayList<>();
+        Listgalettes = new ArrayList<Galette>();
         galette1 = new Galette();
         galette2 = new Galette();
         galette3 = new Galette();
         galette4 = new Galette();
+
 
         galette1  = new GalettePistache(galette1);
         galette2 = new GaletteAllege(galette2);
@@ -27,37 +28,38 @@ public class StrategieTest {
         Listgalettes.add(galette1);
         Listgalettes.add(galette2);
         Listgalettes.add(galette3);
-        Listgalettes.add(galette4);
 
-        Strategie s = new StrategieGourmand();
-        MangeurDeGalettes YounesG = new MangeurDeGalettes(s);
 
-        Strategie s2 = new StrategieGourmand();
-        MangeurDeGalettes AslanGu = new MangeurDeGalettes(s2);
+         s = new StrategieGourmand();
+         Younes = new MangeurDeGalettes(s);
 
-        Strategie s3 = new StrategieVege();
+         s2 = new StrategieVege();
+         Aslan = new MangeurDeGalettes(s2);
+
+        s3 = new StrategieGourmet();
     }
 
     @Test
     void TestPartNull() throws Exception {
-
-        assertNull(Younes.rechercherPart(Listgalettes));
+        assertNull(Aslan.rechercherPart(Listgalettes));
     }
     @Test
     void testChoisirPartGalettesPistache() throws Exception {
         PartDeGalette part = s.rechercherPart(Listgalettes,0);
-        assertEquals("GalettePistache", Listgalettes.getClass().getName());
+        assertEquals("GalettePistache", part.getMyGalette().getClass().getName());
         }
 
     @Test
     void testChoisirPartGalettesFrangipane() throws Exception {
-        PartDeGalette part = s2.rechercherPart(Listgalettes,0);
-        assertEquals("GaletteFrangipane", Listgalettes.getClass().getName());
+        PartDeGalette part = s3.rechercherPart(Listgalettes,0);
+        assertEquals("GaletteFrangipane", part.getMyGalette().getClass().getName());
     }
     @Test
     void testChoisirPartGalettesVege() throws Exception {
-        PartDeGalette part = s3.rechercherPart(Listgalettes,0);
-        assertEquals("GaletteVege", Listgalettes.getClass().getName());
+        Listgalettes.add(galette4);
+
+        PartDeGalette part = s2.rechercherPart(Listgalettes,0);
+        assertEquals("GaletteVegetarienne", part.getMyGalette().getClass().getName());
     }
     }
 

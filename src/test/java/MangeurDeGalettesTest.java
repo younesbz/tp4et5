@@ -20,6 +20,7 @@ public class MangeurDeGalettesTest {
     public void setUp() throws Exception {
         Strategie s = new StrategieGourmand();
         eater = new MangeurDeGalettes(s);
+        theG = new Galette();
         theG = new GaletteFrangipane(theG);
         myL_G = new ArrayList<Galette>();
         g1 = new Galette();

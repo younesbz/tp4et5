@@ -4,7 +4,7 @@ public class GaletteFrangipane extends Decorateur {
 
     public GaletteFrangipane(Galette galette) throws Exception {
         super(galette);
-        super.galette.partistionGalette( 2000.0 , 8);
+        super.partistionGalette( 2000.0 , 8);
     }
 
     @Override
