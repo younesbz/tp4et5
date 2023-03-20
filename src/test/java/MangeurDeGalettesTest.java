@@ -23,7 +23,4 @@ class MangeurDeGalettesTest {
 
     }
 
-    @Test
-    void rechercherPart() {
-    }
 }
