@@ -57,7 +57,7 @@ public class ConcoursTest {
 
     @Test
     public void testEnleverLesPerdants() throws Exception {
-        Galette galette1 = new Galette(1000.50,1);
+        Galette galette1 = new Galette();
         GalettePistache gPis = new GalettePistache(galette1);
         assertEquals(0, galettes.size());
         galettes.add(gPis);

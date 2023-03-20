@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StrategieVeganTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-03-20T16:51:02" hostname="ASLAN" time="0.018">
+<testsuite name="StrategieVeganTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-03-20T17:52:45" hostname="LAPTOP-J9BN5RTL" time="0.001">
   <properties/>
-  <testcase name="testChoisirPartGalettesVeganDisponible()" classname="StrategieVeganTest" time="0.018">
+  <testcase name="testChoisirPartGalettesVeganDisponible()" classname="StrategieVeganTest" time="0.001">
     <failure message="java.lang.IndexOutOfBoundsException: Index 3 out of bounds for length 3" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index 3 out of bounds for length 3
 	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
 	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)

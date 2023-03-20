@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class GaletteVegetarienne extends Decorateur {
 
     public GaletteVegetarienne(Galette galette) throws Exception {
@@ -8,6 +10,9 @@ public class GaletteVegetarienne extends Decorateur {
     @Override
     public String getIngredient() {
         return galette.getIngredient() + "Vert";
+    }
+    public ArrayList<PartDeGalette> getListePartDeGalette() {
+        return this.galette.getListePartDeGalette() ;
     }
 
 

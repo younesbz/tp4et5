@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class GalettePistache extends Decorateur {
 
     public GalettePistache(Galette galette) throws Exception {
@@ -10,5 +12,8 @@ public class GalettePistache extends Decorateur {
         return this.galette.getIngredient() + "Pistache";
     }
 
+    public ArrayList<PartDeGalette> getListePartDeGalette() {
+        return this.galette.getListePartDeGalette() ;
+    }
 
 }
