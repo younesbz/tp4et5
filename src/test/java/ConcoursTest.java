@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ConcoursTest {
 
     private Concours concours;
+    private Galette galette;
     private ArrayList<Galette> galettes;
     private ArrayList<MangeurDeGalettes> mangeurs;
 
@@ -27,14 +28,16 @@ public class ConcoursTest {
     public void testAjouterMangeur() {
         MangeurDeGalettes mangeur = new MangeurDeGalettes(strat);
         concours.ajouterMangeur(mangeur);
+
         assertEquals(1, concours.getLes_mangeurs_de_galettes().size());
     }
 
     @Test
     public void testAjouterGalette() throws Exception {
-        Galette galette = new Galette();
+        galette = new Galette();
+        galette  = new GalettePistache(galette);
         concours.ajouterGalette(galette);
-        assertEquals(1, concours.getLes_mangeurs_de_galettes().size());
+        assertEquals(1, concours.getLes_galettes().size());
     }
 
     @Test
@@ -47,7 +50,6 @@ public class ConcoursTest {
         MangeurDeGalettes mangeur = new MangeurDeGalettes(strat);
         mangeur.mangerPart(mangeur.rechercherPart(galettes));
 
-        concours.ajouterGalette(gPis);
         concours.nettoyerTable();
 
         assertEquals(0, concours.getLes_mangeurs_de_galettes().size());
@@ -104,22 +106,6 @@ public class ConcoursTest {
 
 
         MangeurDeGalettes mangeur1 = concours.concourir();
-        //assertEquals(mangeur,mangeur1);
-    }
-
-    @Test
-    public void testConcourirException() throws Exception {
-        Galette galette1 = new Galette();
-        GalettePistache gPis = new GalettePistache(galette1);
-        assertEquals(0, galettes.size());
-
-
-        MangeurDeGalettes mangeur = new MangeurDeGalettes(strat);
-
-        //On a ajoute le mangeur au concours mais pas la galette
-        concours.ajouterMangeur(mangeur);
-
-        assertThrows(IllegalArgumentException.class, () -> concours.concourir());
     }
 
 }

@@ -4,5 +4,4 @@ public class Spectateur extends Observer{
         System.out.println("*clap *clap " +
                 "clap* \n");
     }
-
 }
